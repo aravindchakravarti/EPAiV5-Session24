@@ -41,18 +41,18 @@ def test_invalid_membership():
     with pytest.raises(InvalidMembershipError):
         member.get_fee()
 
-# Test 8: Automatic values in BookGenre
+# # Test 8: Automatic values in BookGenre
 def test_book_genre_values():
     assert BookGenre.FICTION.value == 1
     assert BookGenre.NON_FICTION.value == 2
 
-# Test 9: Custom values in MembershipLevel
+# # Test 9: Custom values in MembershipLevel
 def test_membership_level_values():
     assert MembershipLevel.BASIC.value == 100
     assert MembershipLevel.PREMIUM.value == 200
     assert MembershipLevel.GOLD.value == 500
 
-# Test 10: Borrow and return lifecycle
+# # Test 10: Borrow and return lifecycle
 def test_borrow_and_return():
     book = Book("Cosmos", BookGenre.SCIENCE, True)
     book.borrow()
